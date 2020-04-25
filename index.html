@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    
+    </head>
+
+    <body>
+        <script>
+            function computerPlay() {
+                switch (true) {
+                    case Math.random() <= 0.33:
+                    return 'Rock';
+                    break;
+
+                    case 0.33 < Math.random() <= 0.66:
+                    return 'Scissors';
+                    break;
+
+                    case 0.66 < Math.random() <= 1:
+                    return 'Paper';
+
+                }
+            }
+                   
+                   function playRound (playerSelection, computerSelection) {
+                    playerSelection = prompt('What is your chocie?', ' ')
+                    computerSelection = computerPlay()
+                	compChoice = computerSelection.toLowerCase();
+                    userChoice = playerSelection.toLowerCase();
+
+                    userScore = 0;
+                    compScore = 0;
+
+                    switch(true) {
+                        case (compChoice == 'rock') && (userChoice == 'scissors'):
+                        return 'You Lose! Rock beats Scissors', compScore++;
+                        break;
+
+                        case (compChoice == 'paper') && (userChoice == 'scissors'):
+                        return 'You Win! Scissors beats Paper', userScore++;
+                        break;
+
+                        case (compChoice == 'scissors') && (userChoice == 'scissors'):
+                        return 'Draw. You both chose Scissors!'
+                        break;
+
+                        case (compChoice == 'rock') && (userChoice == 'rock'):
+                        return 'Draw. You both chose Rock!'
+                        break;
+
+                        case (compChoice == 'scissors') && (userChoice == 'rock'):
+                        return 'You Win! Rock beats Scissors', userScore++;
+                        break;
+
+                        case (compChoice == 'paper') && (userChoice == 'rock'):
+                        return 'You Lose! Paper beats Rock', compScore++;
+                        break;
+
+                        case (compChoice == 'rock') && (userChoice == 'paper'):
+                        return 'You Win!. Paper beats Rock!', userScore++;
+                        break;
+
+                        case (compChoice == 'scissors') && (userChoice == 'paper'):
+                        return 'You Lose! Scissors beats Paper', compScore++;
+                        break;
+
+                        case (compChoice == 'paper') && (userChoice == 'paper'):
+                        return 'You Draw. You both chose Paper'; 
+                        break;
+
+                    }
+                    
+                  
+                   
+            }                      
+
+            function game(){
+
+                for (var i = 0; i < 5; i++) {
+                    playRound();
+                    
+                                 
+                }
+
+                switch (true){
+                      case userScore > compScore:
+                      console.log([userScore + ' : ' + compScore] + ' YOU ARE THE WINNER!');
+                      break;
+
+                      case userScore < compScore:
+                      console.log([userScore + ' : ' + compScore] + ' YOU LOSE :(' );
+                      break;
+
+                      case userScore == compScore:
+                      console.log([userScore + ' : ' + compScore] + ' DRAW');
+                      break; 
+                  }
+                                    
+            } 
+
+        </script>
+
+    </body>
+</html>
