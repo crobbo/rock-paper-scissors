@@ -29,9 +29,14 @@
                 	compChoice = computerSelection.toLowerCase();
                     userChoice = playerSelection.toLowerCase();
 
-                    userScore = 0;
-                    compScore = 0;
+                    switch (true){
+                        case userChoice !== 'rock' || userChoice !== 'scissors' || userChoice !== 'scissor' || userChoice !== 'rock':
+                        alert('invalid choice');
+                        break;
+                
+                    }
 
+                
                     switch(true) {
                         case (compChoice == 'rock') && (userChoice == 'scissors'):
                         return 'You Lose! Rock beats Scissors', compScore++;
@@ -73,7 +78,10 @@
                     
                   
                    
-            }                      
+            }        
+
+            let userScore = 0;
+            let compScore = 0;              
 
             function game(){
 
@@ -82,6 +90,8 @@
                     
                                  
                 }
+
+                
 
                 switch (true){
                       case userScore > compScore:
