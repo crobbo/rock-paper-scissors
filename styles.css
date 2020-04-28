@@ -1,0 +1,32 @@
+.page-container { 
+    display: grid;
+    grid-template-columns: 200px 200px auto 200px 200px;
+    grid-template-rows: auto;
+    grid-template-areas:
+         "header header header header header"
+         ". button1 button1 button1 ."
+         "footer footer footer footer footer" ;
+    justify-items: center;
+}
+
+
+
+.page-title {
+    grid-area: header; 
+    justify-self: center;
+}
+
+#btn-rock {
+    grid-area: button1;
+    justify-self: center;
+}
+
+#btn-paper {
+    grid-area: button2;
+    justify-self: center;
+}
+
+#btn-scissors {
+    grid-area: button3;
+    justify-self: center;
+}

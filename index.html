@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <link rel="stylesheet" type="text/css" href="styles.css"> 
+        
+        <title>Rock, Paper, Scissors</title>
+
     
     </head>
 
     <body>
+        <div class="page-container">
+            
+            <h1 class="page-title">Rock, Paper, Scissors</h1>
+            <button class="button" id="btn-rock">ROCK</button>
+            <button class="button" id="btn-paper">PAPER</button>
+            <button class="button" id="btn-scissors">SCISSORS</button>
+            
+
+        </div>
+
+
         <script>
             function computerPlay() {
                 switch (true) {
@@ -84,12 +98,13 @@
             let compScore = 0;              
 
             function game(){
+                playRound();
 
-                for (var i = 0; i < 5; i++) {
-                    playRound();
+                // for (var i = 0; i < 5; i++) {
+                //     playRound();
                     
                                  
-                }
+                // }
 
                 
 
