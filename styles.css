@@ -1,32 +1,73 @@
 .page-container { 
     display: grid;
-    grid-template-columns: 200px 200px auto 200px 200px;
-    grid-template-rows: auto;
+    grid-template-columns: auto 200px 200px 200px auto;
+    grid-template-rows: 100px 400px 100px;
     grid-template-areas:
          "header header header header header"
-         ". button1 button1 button1 ."
+         ". button1 button2 button3 ."
          "footer footer footer footer footer" ;
     justify-items: center;
+    gap: 50px 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: white;
+}
 
+.header {
+    
+    background-color: #404040;    
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 80px;
+       
+}
 
 .page-title {
-    grid-area: header; 
-    justify-self: center;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+        
 }
 
-#btn-rock {
+.button {
+    font-family: 'Poppins', sans-serif;
+}
+
+ #btn-rock {
     grid-area: button1;
     justify-self: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 200px;
 }
 
 #btn-paper {
     grid-area: button2;
     justify-self: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 200px;
 }
 
 #btn-scissors {
     grid-area: button3;
     justify-self: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 200px;
+
 }
+
