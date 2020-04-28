@@ -7,8 +7,8 @@ I created a Rock Paper Scissors game using JavaScript. Check out the JavaScipt h
 # Summary 
 
 * Wrote JavaScript functions
-* Used Switch to keep my code clean
-* Used a For Loop to repeat the game 5 times and then declare the winner.
+* Used Switch statements to keep my code clean
+* Used a For Loop to repeat the game 5 times.
 
 # Key Result
 
