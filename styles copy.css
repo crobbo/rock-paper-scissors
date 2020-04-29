@@ -14,19 +14,7 @@
     width:90%;
 }
 
-@media (max-width:500px){
-    .page-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px; 
-        grid-template-areas: 
-           "header"
-           "overall-score"
-           "button1"
-           "button2"
-           "button3"
-           "footer";
-    }
-}
+
 
 
 
@@ -55,7 +43,7 @@ body {
 
 .button {
     font-family: 'Poppins', sans-serif;
-    /* width: 300px; */
+    width: 300px;
     height: 300px;
     border-radius: 30px;
     background-color: #f7f7f7;
@@ -145,4 +133,30 @@ body {
 
 #last-round {
     color: grey;
+}
+
+@media (max-width:500px){
+    .page-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px; 
+        grid-template-areas: 
+           "header"
+           "best-of"
+           "overall-score"
+           "running-score"
+           "button1"
+           "button2"
+           "button3"
+           "footer";
+        justify-items: center;
+        
+    }
+
+    .best-of {
+        justify-content: center;
+        right: 0px;
+    }
+
+    .
+
 }
