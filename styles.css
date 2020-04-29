@@ -1,13 +1,15 @@
 .page-container { 
     display: grid;
     grid-template-columns: auto 300px 300px 300px auto;
-    grid-template-rows: 100px 400px 100px;
+    grid-template-rows: 100px 100px 100px 400px 100px;
     grid-template-areas:
          "header header header header header"
+         ". . overall-score . ."
+         ". . running-score . ."
          ". button1 button2 button3 ."
          "footer footer footer footer footer" ;
     justify-items: center;
-    gap: 50px 75px;
+    gap: 20px 75px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -46,7 +48,7 @@ body {
     border-radius: 10px;
     font-size: 28px;
     font-weight: bold;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 
 #btn-paper {
@@ -55,7 +57,7 @@ body {
     border-radius: 10px;
     font-size: 28px;
     font-weight: bold;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 
 #btn-scissors {
@@ -64,7 +66,18 @@ body {
     border-radius: 10px;
     font-size: 28px;
     font-weight: bold;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 
 }
 
+.running-score {
+    grid-area: running-score;
+}
+
+.display-result {
+    color: black;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    width: 500px;
+}
