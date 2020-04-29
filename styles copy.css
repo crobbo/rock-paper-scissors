@@ -1,6 +1,6 @@
 .page-container { 
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-rows: 100px 100px 100px 400px 100px;
     grid-template-areas:
          "header header header header header"
@@ -11,7 +11,24 @@
     justify-items: center;
     gap: 20px 75px;
     font-family: 'Poppins', sans-serif;
-}   
+    width:90%;
+}
+
+@media (max-width:500px){
+    .page-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px; 
+        grid-template-areas: 
+           "header"
+           "overall-score"
+           "button1"
+           "button2"
+           "button3"
+           "footer";
+    }
+}
+
+
 
 body {
     background-color: white;
@@ -38,7 +55,7 @@ body {
 
 .button {
     font-family: 'Poppins', sans-serif;
-    width: 300px;
+    /* width: 300px; */
     height: 300px;
     border-radius: 30px;
     background-color: #f7f7f7;
@@ -47,7 +64,6 @@ body {
 
  #btn-rock {
     grid-area: button1;
-    display: grid;
     justify-self: center;
     
     
@@ -89,7 +105,7 @@ body {
     font-size: 30px;
     position: relative;
     text-align: center;
-    width: 500px;
+    /* width: 500px; */
 }
 
 #result p {
@@ -102,7 +118,7 @@ body {
     font-size: 30px;
     position: relative;
     text-align: center;
-    width: 500px;
+    /* width: 500px; */
 }
 
 
