@@ -4,7 +4,7 @@
     grid-template-rows: 100px 100px 100px 400px 100px;
     grid-template-areas:
          "header header header header header"
-         ". . overall-score . ."
+         ". best-of overall-score . ."
          ". . running-score . ."
          ". button1 button2 button3 ."
          "footer footer footer footer footer" ;
@@ -39,13 +39,16 @@ body {
     font-family: 'Poppins', sans-serif;
     width: 300px;
     height: 300px;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    box-shadow: 6px 6px #e6e6e6;
 }
 
  #btn-rock {
     grid-area: button1;
     justify-self: center;
     
-    border-radius: 10px;
+    
     font-size: 28px;
     font-weight: bold;
     /* margin-top: 200px; */
@@ -54,7 +57,6 @@ body {
 #btn-paper {
     grid-area: button2;
     justify-self: center;
-    border-radius: 10px;
     font-size: 28px;
     font-weight: bold;
     /* margin-top: 200px; */
@@ -63,7 +65,6 @@ body {
 #btn-scissors {
     grid-area: button3;
     justify-self: center;
-    border-radius: 10px;
     font-size: 28px;
     font-weight: bold;
     /* margin-top: 200px; */
@@ -103,4 +104,27 @@ body {
 }
 
 
+.best-of {
+    grid-area: best-of;
+    position: relative;
+    justify-self: left;
+    border-style: solid;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;  
+    color:#FF4500;
+    right: 130px; 
 
+}
+
+#five {
+    position: relative;
+    text-align: center;
+    color: black;
+    text-align: center;
+    top: 20px;
+}
+
+#last-round {
+    color: grey;
+}
