@@ -80,6 +80,7 @@ function playRound(playerSelection) {
 
 const resultsDiv = document.querySelector('#result');
 const displayResult = document.createElement('p');
+displayResult.setAttribute("id", "last-round");
 
 const totalScore = document.querySelector('#total-score');
 const ongoingScore = document.createElement('p');
@@ -109,17 +110,17 @@ function gameOver(){
             ongoingScore.classList.add('ongoingScore');
             ongoingScore.textContent = 'YOU WIN!';
             totalScore.appendChild(ongoingScore);
-            document.getElementsByClassName('display-resul').style.visibility = "hidden";
+            document.getElementById('last-round').style.visibility = "hidden";
         } else if(compScore > userScore) {
             ongoingScore.classList.add('ongoingScore');
             ongoingScore.textContent = 'YOU LOSE!';
             totalScore.appendChild(ongoingScore);
-            document.getElementsByClassName('display-result').style.visibility = "hidden";
+            document.getElementById('last-round').style.visibility = "hidden";
         } else {
             ongoingScore.classList.add('ongoingScore');
-        ongoingScore.textContent = 'DRAW';
+        ongoingScore.textContent = 'DRAW!';
         totalScore.appendChild(ongoingScore);
-        document.getElementsByClassName('display-result').style.visibility = "hidden";
+        document.getElementById('last-round').style.visibility = "hidden";
         }
         
     } else {
