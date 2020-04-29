@@ -109,14 +109,17 @@ function gameOver(){
             ongoingScore.classList.add('ongoingScore');
             ongoingScore.textContent = 'YOU WIN!';
             totalScore.appendChild(ongoingScore);
+            document.getElementsByClassName('display-resul').style.visibility = "hidden";
         } else if(compScore > userScore) {
             ongoingScore.classList.add('ongoingScore');
             ongoingScore.textContent = 'YOU LOSE!';
             totalScore.appendChild(ongoingScore);
+            document.getElementsByClassName('display-result').style.visibility = "hidden";
         } else {
             ongoingScore.classList.add('ongoingScore');
         ongoingScore.textContent = 'DRAW';
         totalScore.appendChild(ongoingScore);
+        document.getElementsByClassName('display-result').style.visibility = "hidden";
         }
         
     } else {
