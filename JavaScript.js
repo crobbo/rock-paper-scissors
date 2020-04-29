@@ -7,7 +7,6 @@ function playRound(playerSelection) {
         computerSelection = computerPlay()
         compChoice = computerSelection.toLowerCase();
         userChoice = playerSelection.toLowerCase();
-        
 
         switch (false){
             case userChoice == 'rock' || userChoice == 'scissors' || userChoice == 'scissor' || userChoice == 'paper':
@@ -19,67 +18,74 @@ function playRound(playerSelection) {
         switch(true) {
             case (compChoice == 'rock') && (userChoice == 'scissors'):        
             displayResult.classList.add('display-result');
-            displayResult.textContent = 'You Lose! Rock beats Scissors';
-            resultLastGame.appendChild(displayResult); compScore++;
+            displayResult.textContent = 'You Lose! Rock beats Scissors'
+            resultsDiv.appendChild(displayResult); compScore++;
             break;
 
             case (compChoice == 'paper') && (userChoice == 'scissors'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Win! Scissors beats Paper';
-            resultLastGame.appendChild(displayResult); userScore++;
+            resultsDiv.appendChild(displayResult); userScore++;
             break;
 
             case (compChoice == 'scissors') && (userChoice == 'scissors'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'Draw. You both chose Scissors!';
-            resultLastGame.appendChild(displayResult); drawScore++;
+            resultsDiv.appendChild(displayResult); drawScore++;
             break;
 
             case (compChoice == 'rock') && (userChoice == 'rock'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'Draw. You both chose Rock!';
-            resultLastGame.appendChild(displayResult); drawScore++;
+            resultsDiv.appendChild(displayResult); drawScore++;
             break;
 
             case (compChoice == 'scissors') && (userChoice == 'rock'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Win! Rock beats Scissors';
-            resultLastGame.appendChild(displayResult); userScore++;
+            resultsDiv.appendChild(displayResult); userScore++;
             break;
 
             case (compChoice == 'paper') && (userChoice == 'rock'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Lose! Paper beats Rock';
-            resultLastGame.appendChild(displayResult); compScore++;
+            resultsDiv.appendChild(displayResult); compScore++;
             break;
 
             case (compChoice == 'rock') && (userChoice == 'paper'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Win! Paper beats Rock!';
-            resultLastGame.appendChild(displayResult); userScore++;
+            resultsDiv.appendChild(displayResult); userScore++;
             break;
 
             case (compChoice == 'scissors') && (userChoice == 'paper'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Lose! Scissors beats Paper';
-            resultLastGame.appendChild(displayResult); compScore++;
+            resultsDiv.appendChild(displayResult); compScore++;
             break;
 
             case (compChoice == 'paper') && (userChoice == 'paper'):
             displayResult.classList.add('display-result');
             displayResult.textContent = 'You Draw. You both chose Paper';
-            resultLastGame.appendChild(displayResult); drawScore++;
+            resultsDiv.appendChild(displayResult); drawScore++;
             break;
 
         }  
 
+        // ongoingScore.classList.add('ongoingScore');
+        // ongoingScore.textContent = 'Your Score ' + userScore + ' : ' + compScore + '   Computer Score';
+        // totalScore.appendChild(ongoingScore);
+
 }
 
-const resultLastGame = document.querySelector('#result');
+const resultsDiv = document.querySelector('#result');
 const displayResult = document.createElement('p');
-// playerScore.classList.add('playerScore');
-// playerScore.textContent = 'This is the glorious text-content!';
-// resultLastGame.appendChild(playerScore);
+
+const totalScore = document.querySelector('#total-score');
+const ongoingScore = document.createElement('p');
+
+
+
 
 function computerPlay() {
     switch (true) {
@@ -97,39 +103,66 @@ function computerPlay() {
     }
 }
 
-function finalScore() {
+function gameOver(){
+    if (userScore + compScore + drawScore === 5){
+        if(userScore > compScore){
+            ongoingScore.classList.add('ongoingScore');
+            ongoingScore.textContent = 'YOU WIN!';
+            totalScore.appendChild(ongoingScore);
+        } else if(compScore > userScore) {
+            ongoingScore.classList.add('ongoingScore');
+            ongoingScore.textContent = 'YOU LOSE!';
+            totalScore.appendChild(ongoingScore);
+        } else {
+            ongoingScore.classList.add('ongoingScore');
+        ongoingScore.textContent = 'DRAW';
+        totalScore.appendChild(ongoingScore);
+        }
+        
+    } else {
+        ongoingScore.classList.add('ongoingScore');
+        ongoingScore.textContent = 'Your Score ' + userScore + ' : ' + compScore + '   Computer Score';
+        totalScore.appendChild(ongoingScore);
+    }
 
-    switch (true){
-          case userScore > compScore:
-          console.log([userScore + ' : ' + compScore] + ' YOU ARE THE WINNER!');
-          break;
+}
 
-          case userScore < compScore:
-          console.log([userScore + ' : ' + compScore] + ' YOU LOSE :(' );
-          break;
-
-          case userScore === compScore:
-          console.log([userScore + ' : ' + compScore] + ' DRAW');
-          break; 
-      }
-                        
-} 
 
 const btnRock = document.querySelector('#btn-rock');
 btnRock.addEventListener('click', () => {
     playRound('Rock');
-    finalScore();
+    gameOver();
 });
 
 const btnPaper = document.querySelector('#btn-paper');
 btnPaper.addEventListener('click', () => {
     playRound('paper');
-    finalScore();
+    gameOver();
 });
 
 const btnScissors = document.querySelector('#btn-scissors');
 btnScissors.addEventListener('click', () => {
     playRound('scissors');
-    finalScore();
+    gameOver();
 
 });
+
+
+
+// function finalScore() {
+
+    //     switch (true){
+    //           case userScore > compScore:
+    //           console.log([userScore + ' : ' + compScore] + ' YOU ARE THE WINNER!');
+    //           break;
+    
+    //           case userScore < compScore:
+    //           console.log([userScore + ' : ' + compScore] + ' YOU LOSE :(' );
+    //           break;
+    
+    //           case userScore === compScore:
+    //           console.log([userScore + ' : ' + compScore] + ' DRAW');
+    //           break; 
+    //       }
+                            
+    // } 

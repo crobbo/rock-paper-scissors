@@ -70,14 +70,37 @@ body {
 
 }
 
-.running-score {
-    grid-area: running-score;
-}
 
-.display-result {
+
+/* .display-result {
+    color: black;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    width: 500px;
+} */
+
+#result {
+    grid-area: running-score;
     color: black;
     font-size: 30px;
     position: relative;
     text-align: center;
     width: 500px;
 }
+
+#result p {
+    margin-top: 0px;
+}
+
+#total-score {
+    grid-area: overall-score;
+    color: black;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    width: 500px;
+}
+
+
+
