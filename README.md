@@ -4,7 +4,7 @@
 
 I created a Rock Paper Scissors game using JavaScript. Check out the JavaScipt [here](https://crobbo.github.io/rock-paper-scissors/). 
 
-# Summary 
+## Summary 
 
 * Wrote JavaScript functions
 * Used Switch statements for the game logic over if statements due to readability. 
@@ -12,7 +12,7 @@ I created a Rock Paper Scissors game using JavaScript. Check out the JavaScipt [
 * Used JavaScript to manipulate the DOM.
 * Built front end using HTML & CSS Grid. Styled useing CSS, JavaScript.
 
-# Key Result
+## Key Result
 
 Solidified my knowledge of Switch statements & functions. It was my first project where I used JavaScript to manipulate HTML in the DOM.  
 
