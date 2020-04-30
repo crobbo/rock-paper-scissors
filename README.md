@@ -4,6 +4,8 @@
 
 I created a Rock Paper Scissors game using JavaScript. Check out the JavaScipt [here](https://crobbo.github.io/rock-paper-scissors/). 
 
+Check out my blog post about the project [here](https://write.as/christian-robinson/rock-paper-scissors-project).
+
 ## Summary 
 
 * Wrote JavaScript functions
